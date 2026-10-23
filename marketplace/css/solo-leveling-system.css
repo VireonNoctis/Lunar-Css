@@ -1,0 +1,575 @@
+/*
+╔══════════════════════════════════════════════════════╗
+║              ARISE                                   ║
+║      Solo Leveling — System Window Theme             ║
+╠══════════════════════════════════════════════════════╣
+║ Creator : Vireon                                     ║
+║ Style   : HUD / Status Window / Electric Blue        ║
+╚══════════════════════════════════════════════════════╝
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=:wght@600&family=Rajdhani:wght@400&family=Share+Tech+Mono&display=swap');
+
+
+/* ============================
+   PALETTE
+   ============================ */
+
+:root {
+  --void: #04060c;
+  --panel: #070b16;
+  --panel2: #0b1122;
+  --sys-blue: #3ecbff;
+  --sys-blue-deep: #1a8fd1;
+  --sys-blue-glow: rgba(62, 203, 255, 0.55);
+  --sys-white: #eaf6ff;
+  --sys-dim: #5f7898;
+  --tick: #3ecbff;
+}
+
+
+/* ============================
+   BANNER
+   ============================ */
+
+[data-section="banner"] {
+  display: none !important;
+}
+
+
+/* ============================
+   BASE BACKGROUND
+   Dark HUD navy + faint blueprint grid.
+   ============================ */
+
+#profile-css-scope {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(62, 203, 255, 0.035) 0px,
+      rgba(62, 203, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 34px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(62, 203, 255, 0.035) 0px,
+      rgba(62, 203, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 34px
+    ),
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(62, 203, 255, 0.12) 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(4, 6, 12, 0.6),
+      rgba(4, 6, 12, 0.92)
+    ),
+    url('https://files.catbox.moe/REPLACE_WITH_YOUR_BACKGROUND.jpg') !important;
+
+  background-size: 34px 34px, 34px 34px, cover, cover, cover !important;
+  background-position: center, center, center, center, center !important;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat !important;
+  background-attachment: fixed, fixed, fixed, fixed, fixed !important;
+
+  font-family: 'Rajdhani', sans-serif !important;
+  color: var(--sys-white) !important;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif !important;
+  color: var(--sys-white) !important;
+}
+
+
+/* ============================
+   OUTER FRAME
+   ============================ */
+
+#profile-css-scope {
+  border: 1px solid rgba(62, 203, 255, 0.3) !important;
+  outline: 1px solid rgba(62, 203, 255, 0.12) !important;
+  outline-offset: 4px !important;
+}
+
+
+/* ============================
+   CORNER-BRACKET SQUIRCLE — REUSABLE PATTERN
+   Same 8-gradient corner-tick construction as
+   your reference file, recolored to system-blue
+   and given a soft glow instead of flat lines.
+   Applied to: level, bio, anilist-stats,
+   gacha-showcase, watch-history, comment-history,
+   playlists, active-projects, manga-uploads.
+   ============================ */
+
+[data-section="level"],
+[data-section="bio"],
+[data-section="anilist-stats"],
+[data-section="gacha-showcase"],
+[data-section="watch-history"],
+[data-section="comment-history"],
+[data-section="playlists"],
+[data-section="active-projects"],
+[data-section="manga-uploads"] {
+  background-color: var(--panel) !important;
+
+  background-image:
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick)),
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick)),
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick)),
+    linear-gradient(var(--tick), var(--tick)), linear-gradient(var(--tick), var(--tick)) !important;
+
+  background-size:
+    1px 14px, 14px 1px,
+    1px 14px, 14px 1px,
+    1px 14px, 14px 1px,
+    1px 14px, 14px 1px !important;
+
+  background-position:
+    top left,    top left,
+    top right,   top right,
+    bottom left, bottom left,
+    bottom right,bottom right !important;
+
+  background-repeat: no-repeat !important;
+
+  border: 1px solid rgba(62, 203, 255, 0.16) !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+
+  padding: 16px 20px !important;
+  margin-top: 14px !important;
+  position: relative !important;
+
+  box-shadow:
+    0 0 0 1px rgba(4, 6, 12, 0.6),
+    0 0 18px rgba(62, 203, 255, 0.08) !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  transition: box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+[data-section="level"]:hover,
+[data-section="bio"]:hover,
+[data-section="anilist-stats"]:hover,
+[data-section="gacha-showcase"]:hover,
+[data-section="watch-history"]:hover,
+[data-section="comment-history"]:hover,
+[data-section="playlists"]:hover,
+[data-section="active-projects"]:hover,
+[data-section="manga-uploads"]:hover {
+  border-color: rgba(62, 203, 255, 0.4) !important;
+  box-shadow:
+    0 0 0 1px rgba(4, 6, 12, 0.6),
+    0 0 26px rgba(62, 203, 255, 0.22) !important;
+}
+
+
+/* ============================
+   AVATAR
+   Square HUD frame with corner brackets.
+   ============================ */
+
+[data-section="avatar"] img {
+  border-radius: 0 !important;
+  clip-path: none !important;
+
+  border: 1px solid var(--sys-blue) !important;
+  box-shadow:
+    0 0 0 1px rgba(4, 6, 12, 0.8),
+    0 0 14px rgba(62, 203, 255, 0.35) !important;
+
+  filter: none !important;
+  animation: none !important;
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+
+[data-section="avatar"] img:hover {
+  transform: scale(1.02) !important;
+  box-shadow:
+    0 0 0 1px rgba(4, 6, 12, 0.8),
+    0 0 22px rgba(62, 203, 255, 0.55) !important;
+}
+
+
+/* ============================
+   USERNAME
+   HUD readout — left accent bar, "HUNTER" label.
+   ============================ */
+
+[data-section="username"] {
+  border-left: 2px solid var(--sys-blue) !important;
+  padding-left: 14px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  position: relative !important;
+}
+
+[data-section="username"]::before {
+  content: 'HUNTER //';
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--sys-blue-deep);
+  opacity: 0.75;
+  margin-bottom: 2px;
+}
+
+[data-section="username"] h1 {
+  font-family: 'Orbitron', 'Rajdhani', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1.9rem !important;
+  letter-spacing: 0.04em !important;
+
+  color: var(--sys-white) !important;
+  -webkit-text-fill-color: var(--sys-white) !important;
+
+  text-shadow:
+    0 0 8px rgba(62, 203, 255, 0.6),
+    0 0 18px rgba(62, 203, 255, 0.35) !important;
+}
+
+
+/* ============================
+   ONLINE STATUS / DOT / LAST SEEN
+   ============================ */
+
+[data-section="online-status"] * {
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: var(--sys-blue) !important;
+  -webkit-text-fill-color: var(--sys-blue) !important;
+}
+
+[data-section="online-dot"] {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 0 !important;
+  background: var(--sys-blue) !important;
+  box-shadow: 0 0 8px rgba(62, 203, 255, 0.7) !important;
+  animation: none !important;
+  transition: box-shadow 0.6s ease !important;
+}
+
+[data-section="last-seen"] {
+  color: var(--sys-dim) !important;
+  -webkit-text-fill-color: var(--sys-dim) !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 9px !important;
+  letter-spacing: 0.12em !important;
+  opacity: 0.85 !important;
+}
+
+
+/* ============================
+   ACTIVITY CARD
+   ============================ */
+
+[data-section="activity-card"] {
+  background: var(--panel) !important;
+  border: 1px solid rgba(62, 203, 255, 0.25) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 14px rgba(62, 203, 255, 0.08) !important;
+  padding: 12px 16px !important;
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+[data-section="activity-card"] * {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+[data-section="activity-card"] h1,
+[data-section="activity-card"] h2,
+[data-section="activity-card"] h3 {
+  color: var(--sys-blue) !important;
+  -webkit-text-fill-color: var(--sys-blue) !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+}
+
+[data-section="activity-card"] p,
+[data-section="activity-card"] span {
+  color: #8fa8c4 !important;
+  -webkit-text-fill-color: #8fa8c4 !important;
+  font-size: 10px !important;
+  letter-spacing: 0.05em !important;
+}
+
+[data-section="activity-dot"] {
+  width: 5px !important;
+  height: 5px !important;
+  border-radius: 0 !important;
+  background: var(--sys-blue-deep) !important;
+  box-shadow: 0 0 6px rgba(62, 203, 255, 0.6) !important;
+  animation: none !important;
+}
+
+
+/* ============================
+   BADGES
+   System-notification bracket tags.
+   ============================ */
+
+[data-section="badges"] a,
+[data-section="badges"] span,
+[data-section="badges"] div {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 9px !important;
+  letter-spacing: 0.1em !important;
+  background: rgba(62, 203, 255, 0.07) !important;
+  border: 0.5px solid rgba(62, 203, 255, 0.3) !important;
+  color: var(--sys-blue) !important;
+  box-shadow: none !important;
+}
+
+[data-section="badges"]::before {
+  content: "[ SYSTEM ]" !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  padding: 3px 10px !important;
+  border-radius: 0 !important;
+  background: rgba(62, 203, 255, 0.12) !important;
+  border: 0.5px solid rgba(62, 203, 255, 0.5) !important;
+  color: var(--sys-blue) !important;
+  margin-right: 6px !important;
+  vertical-align: middle !important;
+}
+
+[data-section="badges"]::after {
+  content: "[ ARISE — VIREON ]" !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  padding: 3px 10px !important;
+  border-radius: 0 !important;
+  background: rgba(62, 203, 255, 0.2) !important;
+  border: 0.5px solid rgba(62, 203, 255, 0.5) !important;
+  color: var(--sys-blue) !important;
+  margin-left: 6px !important;
+  vertical-align: middle !important;
+}
+
+
+/* ============================
+   LEVEL / STATUS WINDOW
+   ============================ */
+
+[data-section="level"]::before {
+  content: 'STATUS';
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--sys-blue-deep);
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+[data-section="level"] > div span,
+[data-section="level"] > div p,
+[data-section="level"] > div h3,
+[data-section="level"] > span,
+[data-section="level"] > p {
+  color: var(--sys-dim) !important;
+  -webkit-text-fill-color: var(--sys-dim) !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 9px !important;
+  letter-spacing: 0.18em !important;
+  text-shadow: none !important;
+  text-transform: uppercase !important;
+  background: none !important;
+}
+
+[role="progressbar"] {
+  background: rgba(4, 6, 12, 0.7) !important;
+  border: 1px solid rgba(62, 203, 255, 0.25) !important;
+  border-radius: 0 !important;
+  height: 3px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+[data-section="level"] [role="progressbar"] > div,
+[role="progressbar"] > div {
+  background: var(--sys-blue) !important;
+  background-image: none !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 8px rgba(62, 203, 255, 0.7) !important;
+  animation: none !important;
+  transition: filter 0.3s ease !important;
+}
+
+[data-section="level"]:hover [role="progressbar"] > div {
+  filter: brightness(1.25) !important;
+}
+
+
+/* ============================
+   GACHA SHOWCASE IMAGES
+   ============================ */
+
+[data-section="gacha-showcase"] img {
+  display: block !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  border: 1px solid rgba(62, 203, 255, 0.3) !important;
+  filter: none !important;
+}
+
+
+/* ============================
+   SECTION HEADERS
+   ============================ */
+
+[data-section] h2,
+[data-section] h3 {
+  font-family: 'Share Tech Mono', monospace !important;
+  color: var(--sys-blue-deep) !important;
+  -webkit-text-fill-color: var(--sys-blue-deep) !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+  border: none !important;
+  padding-left: 0 !important;
+  background: none !important;
+}
+
+
+/* ============================
+   BUTTONS
+   ============================ */
+
+button,
+a[role="button"],
+[class*="btn"],
+[class*="button"] {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+
+  background: var(--panel) !important;
+  border: 1px solid rgba(62, 203, 255, 0.3) !important;
+  color: var(--sys-blue) !important;
+
+  font-family: 'Share Tech Mono', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 14px 18px !important;
+
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+button:hover,
+a[role="button"]:hover {
+  background: var(--panel2) !important;
+  border-color: rgba(62, 203, 255, 0.65) !important;
+  box-shadow: 0 0 14px rgba(62, 203, 255, 0.25) !important;
+}
+
+button::after,
+a[role="button"]::after {
+  content: '»';
+  color: rgba(62, 203, 255, 0.6) !important;
+  font-size: 12px !important;
+  margin-left: auto !important;
+}
+
+
+/* ============================
+   MUSIC TOGGLE
+   ============================ */
+
+[data-section="profile-music-toggle"] {
+  background: var(--panel) !important;
+  color: var(--sys-blue) !important;
+  border: 1px solid rgba(62, 203, 255, 0.35) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[data-section="profile-music-toggle"]:hover {
+  background: var(--panel2) !important;
+  border-color: rgba(62, 203, 255, 0.7) !important;
+  box-shadow: 0 0 12px rgba(62, 203, 255, 0.3) !important;
+}
+
+
+/* ============================
+   LINKS
+   ============================ */
+
+a {
+  color: var(--sys-blue) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--sys-white) !important;
+  text-shadow: 0 0 8px rgba(62, 203, 255, 0.5) !important;
+}
+
+
+/* ============================
+   SCROLLBAR
+   ============================ */
+
+::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sys-blue) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 6px rgba(62, 203, 255, 0.5) !important;
+}
+
+/* ====================
+  FULL PROFILE TARGETTING
+  ====================*/
+
+  #profile-css-scope .card,#profile-css-scope .box,#profile-css-scope .panel,#profile-css-scope .profile-section,#profile-css-scope .content-box,#profile-css-scope [class*="card"],#profile-css-scope [class*="panel"]{background-color:var(--panel)!important;background-image:linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick)),linear-gradient(var(--tick),var(--tick))!important;background-size:1px 14px,14px 1px,1px 14px,14px 1px,1px 14px,14px 1px,1px 14px,14px 1px!important;background-position:top left,top left,top right,top right,bottom left,bottom left,bottom right,bottom right!important;background-repeat:no-repeat!important;border:1px solid rgba(62,203,255,.16)!important;border-radius:0!important;clip-path:none!important;color:var(--sys-white)!important;box-shadow:0 0 0 1px rgba(4,6,12,.6),0 0 18px rgba(62,203,255,.07)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;transition:border-color .3s ease,box-shadow .3s ease,background-color .3s ease!important}
+  #profile-css-scope .card:hover,#profile-css-scope .box:hover,#profile-css-scope .panel:hover,#profile-css-scope .profile-section:hover,#profile-css-scope .content-box:hover,#profile-css-scope [class*="card"]:hover,#profile-css-scope [class*="panel"]:hover{border-color:rgba(62,203,255,.4)!important;box-shadow:0 0 0 1px rgba(4,6,12,.65),0 0 26px rgba(62,203,255,.18)!important}
+  #profile-css-scope .card h1,#profile-css-scope .card h2,#profile-css-scope .card h3,#profile-css-scope .card h4,#profile-css-scope .box h1,#profile-css-scope .box h2,#profile-css-scope .box h3,#profile-css-scope .box h4,#profile-css-scope .panel h1,#profile-css-scope .panel h2,#profile-css-scope .panel h3,#profile-css-scope .panel h4,#profile-css-scope .profile-section h1,#profile-css-scope .profile-section h2,#profile-css-scope .profile-section h3,#profile-css-scope .profile-section h4,#profile-css-scope .content-box h1,#profile-css-scope .content-box h2,#profile-css-scope .content-box h3,#profile-css-scope .content-box h4,#profile-css-scope [class*="card"] h1,#profile-css-scope [class*="card"] h2,#profile-css-scope [class*="card"] h3,#profile-css-scope [class*="card"] h4,#profile-css-scope [class*="panel"] h1,#profile-css-scope [class*="panel"] h2,#profile-css-scope [class*="panel"] h3,#profile-css-scope [class*="panel"] h4{font-family:'Share Tech Mono',monospace!important;color:var(--sys-blue)!important;-webkit-text-fill-color:var(--sys-blue)!important;font-weight:400!important;letter-spacing:.14em!important;text-transform:uppercase!important;text-shadow:0 0 8px rgba(62,203,255,.18)!important}
+  #profile-css-scope .card p,#profile-css-scope .card span,#profile-css-scope .box p,#profile-css-scope .box span,#profile-css-scope .panel p,#profile-css-scope .panel span,#profile-css-scope .profile-section p,#profile-css-scope .profile-section span,#profile-css-scope .content-box p,#profile-css-scope .content-box span,#profile-css-scope [class*="card"] p,#profile-css-scope [class*="card"] span,#profile-css-scope [class*="panel"] p,#profile-css-scope [class*="panel"] span{font-family:'Rajdhani',sans-serif!important;color:var(--sys-dim)!important;-webkit-text-fill-color:var(--sys-dim)!important}
+  #profile-css-scope .card img,#profile-css-scope .box img,#profile-css-scope .panel img,#profile-css-scope .profile-section img,#profile-css-scope .content-box img,#profile-css-scope [class*="card"] img,#profile-css-scope [class*="panel"] img{border-radius:0!important;clip-path:none!important;border:1px solid rgba(62,203,255,.22)!important;box-shadow:0 0 10px rgba(62,203,255,.08)!important;filter:none!important}
+  #profile-css-scope .card hr,#profile-css-scope .box hr,#profile-css-scope .panel hr,#profile-css-scope .profile-section hr,#profile-css-scope .content-box hr,#profile-css-scope [class*="card"] hr,#profile-css-scope [class*="panel"] hr{border:0!important;border-top:1px solid rgba(62,203,255,.14)!important;opacity:1!important}
+  #profile-css-scope .card input,#profile-css-scope .card textarea,#profile-css-scope .card select,#profile-css-scope .box input,#profile-css-scope .box textarea,#profile-css-scope .box select,#profile-css-scope .panel input,#profile-css-scope .panel textarea,#profile-css-scope .panel select,#profile-css-scope [class*="card"] input,#profile-css-scope [class*="card"] textarea,#profile-css-scope [class*="card"] select,#profile-css-scope [class*="panel"] input,#profile-css-scope [class*="panel"] textarea,#profile-css-scope [class*="panel"] select{background:rgba(4,6,12,.75)!important;color:var(--sys-white)!important;border:1px solid rgba(62,203,255,.25)!important;border-radius:0!important;font-family:'Share Tech Mono',monospace!important;outline:none!important;box-shadow:none!important}
+  #profile-css-scope .card input:focus,#profile-css-scope .card textarea:focus,#profile-css-scope .box input:focus,#profile-css-scope .box textarea:focus,#profile-css-scope .panel input:focus,#profile-css-scope .panel textarea:focus,#profile-css-scope [class*="card"] input:focus,#profile-css-scope [class*="card"] textarea:focus,#profile-css-scope [class*="panel"] input:focus,#profile-css-scope [class*="panel"] textarea:focus{border-color:var(--sys-blue)!important;box-shadow:0 0 10px rgba(62,203,255,.18)!important}
+  #profile-css-scope .card::before,#profile-css-scope .box::before,#profile-css-scope .panel::before,#profile-css-scope .profile-section::before,#profile-css-scope .content-box::before{color:var(--sys-blue-deep);font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.22em;opacity:.55;pointer-events:none}
+  #profile-css-scope .card *,#profile-css-scope .box *,#profile-css-scope .panel *,#profile-css-scope .profile-section *,#profile-css-scope .content-box *,#profile-css-scope [class*="card"] *,#profile-css-scope [class*="panel"] *{scrollbar-color:var(--sys-blue) var(--void)!important}
+  #profile-css-scope .card ::selection,#profile-css-scope .box ::selection,#profile-css-scope .panel ::selection,#profile-css-scope .profile-section ::selection,#profile-css-scope .content-box ::selection{background:rgba(62,203,255,.25)!important;color:var(--sys-white)!important}
