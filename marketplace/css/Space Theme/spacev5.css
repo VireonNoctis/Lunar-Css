@@ -1,0 +1,550 @@
+/*
+╔══════════════════════════════════════════════════════╗
+║              SPACE THEME v5 — FINALE                 ║
+║                     True Space                       ║
+╠══════════════════════════════════════════════════════╣
+║ Creator : Vireon                                     ║
+║ Style   : Realistic Deep Space                       ║
+╚══════════════════════════════════════════════════════╝
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Space+Mono&display=swap');
+
+
+/* ============================
+   PALETTE
+   ============================ */
+
+:root {
+  --void: #000308;
+  --void-deep: #000103;
+  --space-blue: #0a1830;
+  --nebula-violet: #6b2fd4;
+  --nebula-magenta: #d42f8e;
+  --nebula-teal: #2fd4b8;
+
+  --planet-light: #8fb4e8;
+  --planet-base: #3a5a8c;
+  --planet-shadow: #0a1830;
+  --ring-color: #c9b87a;
+
+  --plasma: #5fd4ff;
+  --plasma-hot: #ffd27a;
+  --starlight: #eaf2ff;
+  --dim: #7a8ab0;
+
+  --panel: rgba(10, 18, 30, 0.72);
+  --panel-deep: rgba(4, 8, 16, 0.88);
+}
+
+
+/* ============================
+   BODY
+   ============================ */
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+
+/* ============================
+   BANNER
+   ============================ */
+
+[data-section="banner"] {
+  display: none !important;
+}
+
+
+/* ============================
+   STARFIELD
+   ============================ */
+
+#profile-css-scope {
+  background-image:
+    radial-gradient(0.58px 0.58px at 63.1% 5.4%, rgba(234,242,255,0.44), transparent),
+    radial-gradient(0.66px 0.66px at 12.6% 72.6%, rgba(234,242,255,0.41), transparent),
+    radial-gradient(0.68px 0.68px at 11.8% 24.9%, rgba(234,242,255,0.61), transparent),
+    radial-gradient(0.63px 0.63px at 68.9% 42.4%, rgba(234,242,255,0.64), transparent),
+    radial-gradient(0.71px 0.71px at 3.6% 78.7%, rgba(234,242,255,0.48), transparent),
+    radial-gradient(0.53px 0.53px at 23.2% 74.8%, rgba(234,242,255,0.43), transparent),
+    radial-gradient(0.74px 0.74px at 82.7% 59.8%, rgba(234,242,255,0.56), transparent),
+    radial-gradient(0.67px 0.67px at 94.5% 38.6%, rgba(234,242,255,0.57), transparent),
+    radial-gradient(0.57px 0.57px at 69.2% 7.3%, rgba(234,242,255,0.7), transparent),
+    radial-gradient(0.61px 0.61px at 83.4% 84.4%, rgba(234,242,255,0.59), transparent),
+    radial-gradient(0.56px 0.56px at 37.3% 37.8%, rgba(234,242,255,0.61), transparent),
+    radial-gradient(0.69px 0.69px at 67.3% 9.7%, rgba(234,242,255,0.45), transparent),
+    radial-gradient(0.69px 0.69px at 38.7% 96.0%, rgba(234,242,255,0.61), transparent),
+    radial-gradient(0.57px 0.57px at 82.2% 75.9%, rgba(234,242,255,0.64), transparent),
+    radial-gradient(0.77px 0.77px at 40.7% 9.2%, rgba(234,242,255,0.46), transparent),
+    radial-gradient(0.69px 0.69px at 49.9% 86.2%, rgba(234,242,255,0.48), transparent),
+    radial-gradient(0.58px 0.58px at 26.2% 55.8%, rgba(234,242,255,0.67), transparent),
+    radial-gradient(0.8px 0.8px at 40.5% 23.6%, rgba(234,242,255,0.43), transparent),
+    radial-gradient(0.89px 0.89px at 7.4% 13.3%, rgba(205,228,255,0.68), transparent),
+    radial-gradient(0.84px 0.84px at 39.2% 59.0%, rgba(205,228,255,0.79), transparent),
+    radial-gradient(0.92px 0.92px at 83.9% 4.1%, rgba(205,228,255,0.73), transparent),
+    radial-gradient(0.75px 0.75px at 35.0% 30.6%, rgba(234,242,255,0.79), transparent),
+    radial-gradient(0.85px 0.85px at 85.3% 27.8%, rgba(234,242,255,0.65), transparent),
+    radial-gradient(0.95px 0.95px at 13.0% 61.8%, rgba(234,242,255,0.55), transparent),
+    radial-gradient(0.93px 0.93px at 74.7% 53.7%, rgba(234,242,255,0.68), transparent),
+    radial-gradient(0.81px 0.81px at 48.9% 13.5%, rgba(205,228,255,0.57), transparent),
+    radial-gradient(0.72px 0.72px at 25.6% 56.3%, rgba(205,228,255,0.74), transparent),
+    radial-gradient(0.74px 0.74px at 94.9% 53.1%, rgba(205,228,255,0.78), transparent),
+    radial-gradient(0.88px 0.88px at 18.5% 52.6%, rgba(234,242,255,0.78), transparent),
+    radial-gradient(0.91px 0.91px at 74.0% 67.8%, rgba(205,228,255,0.8), transparent),
+    radial-gradient(0.86px 0.86px at 64.1% 44.2%, rgba(234,242,255,0.57), transparent),
+    radial-gradient(0.87px 0.87px at 9.0% 5.0%, rgba(234,242,255,0.5), transparent),
+    radial-gradient(0.72px 0.72px at 69.5% 8.5%, rgba(234,242,255,0.76), transparent),
+    radial-gradient(0.9px 0.9px at 9.7% 25.4%, rgba(234,242,255,0.66), transparent),
+    radial-gradient(1.13px 1.13px at 71.0% 85.9%, rgba(234,242,255,0.84), transparent),
+    radial-gradient(0.94px 0.94px at 78.9% 20.9%, rgba(205,228,255,0.71), transparent),
+    radial-gradient(0.92px 0.92px at 41.6% 84.2%, rgba(234,242,255,0.62), transparent),
+    radial-gradient(0.94px 0.94px at 71.5% 78.3%, rgba(234,242,255,0.66), transparent),
+    radial-gradient(1.01px 1.01px at 45.2% 42.7%, rgba(234,242,255,0.86), transparent),
+    radial-gradient(1.24px 1.24px at 10.1% 79.0%, rgba(234,242,255,0.62), transparent),
+    radial-gradient(1.29px 1.29px at 96.9% 81.6%, rgba(234,242,255,0.65), transparent),
+    radial-gradient(1.06px 1.06px at 48.7% 23.1%, rgba(234,242,255,0.65), transparent),
+    radial-gradient(1.27px 1.27px at 3.2% 39.7%, rgba(205,228,255,0.69), transparent),
+    radial-gradient(1.21px 1.21px at 68.5% 71.7%, rgba(205,228,255,0.65), transparent),
+    radial-gradient(1.13px 1.13px at 30.9% 94.1%, rgba(234,242,255,0.82), transparent),
+    radial-gradient(1.1px 1.1px at 8.4% 57.9%, rgba(234,242,255,0.62), transparent),
+    radial-gradient(0.93px 0.93px at 50.7% 83.0%, rgba(234,242,255,0.8), transparent),
+    radial-gradient(1.26px 1.26px at 25.1% 14.3%, rgba(234,242,255,0.77), transparent),
+    radial-gradient(1.36px 1.36px at 6.7% 10.7%, rgba(255,233,196,0.93), transparent),
+    radial-gradient(1.2px 1.2px at 22.2% 70.3%, rgba(255,233,196,0.73), transparent),
+    radial-gradient(1.47px 1.47px at 63.7% 46.0%, rgba(234,242,255,0.7), transparent),
+    radial-gradient(1.14px 1.14px at 61.4% 55.9%, rgba(234,242,255,0.83), transparent),
+    radial-gradient(1.13px 1.13px at 15.5% 35.8%, rgba(234,242,255,0.79), transparent),
+    radial-gradient(1.38px 1.38px at 17.8% 81.4%, rgba(234,242,255,0.87), transparent),
+    radial-gradient(1.14px 1.14px at 55.1% 90.6%, rgba(234,242,255,0.77), transparent),
+    radial-gradient(1.16px 1.16px at 86.6% 72.8%, rgba(255,233,196,0.85), transparent),
+    radial-gradient(1.35px 1.35px at 70.5% 22.1%, rgba(255,233,196,0.83), transparent),
+    radial-gradient(1.12px 1.12px at 26.6% 88.4%, rgba(255,233,196,0.91), transparent),
+    radial-gradient(1.15px 1.15px at 7.1% 34.4%, rgba(255,233,196,0.74), transparent),
+    radial-gradient(1.32px 1.32px at 44.5% 69.3%, rgba(234,242,255,0.72), transparent),
+    radial-gradient(1.67px 1.67px at 86.0% 88.0%, rgba(205,228,255,0.92), transparent),
+    radial-gradient(1.55px 1.55px at 16.9% 15.0%, rgba(234,242,255,0.98), transparent),
+    radial-gradient(1.45px 1.45px at 22.7% 26.5%, rgba(205,228,255,0.99), transparent),
+    radial-gradient(1.52px 1.52px at 73.5% 90.0%, rgba(234,242,255,1.0), transparent),
+    radial-gradient(1.41px 1.41px at 79.2% 85.9%, rgba(205,228,255,0.96), transparent),
+    radial-gradient(1.77px 1.77px at 41.7% 66.0%, rgba(234,242,255,0.85), transparent),
+    radial-gradient(1.84px 1.84px at 77.0% 13.2%, rgba(205,228,255,0.84), transparent),
+    radial-gradient(1.55px 1.55px at 79.8% 46.3%, rgba(234,242,255,0.84), transparent),
+    radial-gradient(1.97px 1.97px at 65.0% 40.5%, rgba(255,255,255,1.0), transparent),
+    radial-gradient(2.04px 2.04px at 29.2% 63.3%, rgba(255,233,196,0.99), transparent),
+    radial-gradient(1.91px 1.91px at 13.8% 94.2%, rgba(255,233,196,0.9), transparent),
+    radial-gradient(2.27px 2.27px at 59.1% 35.5%, rgba(255,233,196,0.96), transparent),
+    radial-gradient(2.15px 2.15px at 51.1% 39.2%, rgba(255,233,196,0.9), transparent) !important
+;
+  background-size:
+    90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px,
+    90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px, 90px 90px,
+    140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px,
+    140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px, 140px 140px,
+    190px 190px, 190px 190px, 190px 190px, 190px 190px, 190px 190px, 190px 190px, 190px 190px, 190px 190px,
+    190px 190px, 190px 190px, 190px 190px, 190px 190px, 190px 190px, 190px 190px,
+    260px 260px, 260px 260px, 260px 260px, 260px 260px, 260px 260px, 260px 260px, 260px 260px, 260px 260px,
+    260px 260px, 260px 260px, 260px 260px, 260px 260px,
+    340px 340px, 340px 340px, 340px 340px, 340px 340px, 340px 340px, 340px 340px, 340px 340px, 340px 340px,
+    480px 480px, 480px 480px, 480px 480px, 480px 480px, 480px 480px !important;
+
+  background-repeat:
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    repeat, repeat, repeat, repeat, repeat !important;
+
+  background-attachment:
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed, fixed, fixed, fixed,
+    fixed, fixed, fixed, fixed, fixed !important;
+}
+
+
+/* ============================
+   USERNAME
+   ============================ */
+
+[data-section="username"] h1 {
+  font-family: 'Cinzel', serif !important;
+  font-size: 2rem !important;
+  letter-spacing: 0.04em !important;
+
+  background: linear-gradient(90deg, var(--plasma), var(--starlight) 50%, var(--plasma-hot)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  text-shadow: 0 0 18px rgba(95, 212, 255, 0.3) !important;
+  transition: transform 0.25s ease !important;
+}
+
+[data-section="username"] h1:hover {
+  transform: translateY(-3px) !important;
+}
+
+
+/* ============================
+   ONLINE STATUS / DOT / LAST SEEN
+   ============================ */
+
+[data-section="online-status"] {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--plasma) !important;
+  -webkit-text-fill-color: var(--plasma) !important;
+}
+
+[data-section="online-dot"] {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: var(--plasma-hot) !important;
+  box-shadow: 0 0 9px rgba(255, 210, 122, 0.85) !important;
+  transition: box-shadow 0.6s ease !important;
+}
+
+[data-section="last-seen"] {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.72rem !important;
+  color: var(--dim) !important;
+}
+
+
+
+/* ============================
+   BADGES
+   ============================ */
+
+[data-section="badges"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+[data-section="badges"]::before {
+  content: "TRUE SPACE";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  margin: 2px;
+
+  font-family: 'Cinzel', serif !important;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--starlight);
+
+  background: linear-gradient(135deg, rgba(95, 212, 255, 0.2), rgba(107, 47, 212, 0.2));
+  border: 1px solid rgba(95, 212, 255, 0.4);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(95, 212, 255, 0.2);
+}
+
+[data-section="badges"]::after {
+  content: "VIREON";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  margin: 2px;
+
+  font-family: 'Cinzel', serif !important;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--plasma-hot);
+
+  background: linear-gradient(135deg, rgba(255, 210, 122, 0.18), rgba(10, 18, 30, 0.5));
+  border: 1px solid rgba(255, 210, 122, 0.35);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(255, 210, 122, 0.15);
+}
+
+[data-section="badges"] a,
+[data-section="badges"] span,
+[data-section="badges"] div {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 10px !important;
+
+  border: 1px solid rgba(95, 212, 255, 0.3) !important;
+  border-radius: 999px !important;
+  color: var(--starlight) !important;
+  padding: 5px 14px !important;
+
+  background: linear-gradient(135deg, rgba(95, 212, 255, 0.1), rgba(107, 47, 212, 0.12)) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+[data-section="badges"] a:hover,
+[data-section="badges"] span:hover,
+[data-section="badges"] div:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 14px rgba(95, 212, 255, 0.3) !important;
+}
+
+
+/* ============================
+   LEVEL / XP CARD
+   ============================ */
+
+[data-section="level"] {
+  background: var(--panel-deep) !important;
+  border: 1px solid rgba(95, 212, 255, 0.3) !important;
+  border-radius: 14px !important;
+  padding: 20px !important;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55) !important;
+  transition: box-shadow 0.35s ease !important;
+}
+
+[data-section="level"]::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 220px;
+  height: 220px;
+
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255, 210, 122, 0.25) 40deg,
+    rgba(95, 212, 255, 0.4) 90deg,
+    transparent 140deg,
+    transparent 220deg,
+    rgba(107, 47, 212, 0.3) 280deg,
+    transparent 360deg
+  );
+  border-radius: 50%;
+
+  mask: radial-gradient(circle, transparent 38%, black 42%, black 68%, transparent 72%);
+  -webkit-mask: radial-gradient(circle, transparent 38%, black 42%, black 68%, transparent 72%);
+
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.8;
+
+  transform: rotate(0deg);
+  transition: transform 3s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.5s ease;
+}
+
+[data-section="level"]:hover::before {
+  transform: rotate(260deg) !important;
+  opacity: 1 !important;
+}
+
+[data-section="level"]:hover {
+  box-shadow: 0 16px 34px rgba(95, 212, 255, 0.25) !important;
+}
+
+[role="progressbar"] {
+  background: rgba(0, 3, 8, 0.7) !important;
+  border: 1px solid rgba(95, 212, 255, 0.25) !important;
+  border-radius: 999px !important;
+  height: 8px !important;
+  overflow: hidden !important;
+  position: relative;
+  z-index: 1;
+}
+
+[data-section="level"] [role="progressbar"] > div,
+[role="progressbar"] > div {
+  height: 8px !important;
+  background: linear-gradient(90deg, var(--nebula-violet), var(--plasma), var(--plasma-hot)) !important;
+  box-shadow: 0 0 10px rgba(95, 212, 255, 0.55) !important;
+  border-radius: 999px !important;
+  transition: filter 0.4s ease !important;
+}
+
+[data-section="level"]:hover [role="progressbar"] > div {
+  filter: brightness(1.25) !important;
+}
+
+
+/* ============================
+   ICONS
+   ============================ */
+
+.lucide.w-4.h-4 {
+  color: var(--plasma) !important;
+}
+
+.w-8.h-8.rounded-full.bg-yellow-500\/20,
+.w-8.h-8.rounded-full.bg-purple-500\/20,
+.w-8.h-8.rounded-full.bg-blue-500\/20,
+.w-8.h-8.rounded-full.bg-green-500\/20 {
+  background: linear-gradient(135deg, rgba(95, 212, 255, 0.18), rgba(107, 47, 212, 0.15)) !important;
+  border: 1px solid rgba(95, 212, 255, 0.3) !important;
+}
+
+
+/* ============================
+   BUTTONS
+   ============================ */
+
+#profile-css-scope button,
+#profile-css-scope [type="button"],
+#profile-css-scope [type="submit"],
+#profile-css-scope a[role="button"] {
+  position: relative !important;
+  overflow: hidden !important;
+
+  font-family: 'Space Mono', monospace !important;
+  font-size: 11px !important;
+  letter-spacing: 0.06em !important;
+  padding: 9px 22px !important;
+
+  border-radius: 10px !important;
+  color: var(--starlight) !important;
+  border: 1px solid rgba(95, 212, 255, 0.35) !important;
+
+  background:
+    linear-gradient(105deg, transparent 42%, rgba(234, 242, 255, 0.25) 50%, transparent 58%) 100% 0 / 250% 100% no-repeat,
+    linear-gradient(180deg, transparent 85%, rgba(95, 212, 255, 0.35) 100%) center / 100% 100% no-repeat,
+    linear-gradient(180deg, var(--panel), var(--panel-deep)) !important;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45) !important;
+
+  transition:
+    background-position 0.6s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease !important;
+}
+
+#profile-css-scope button:hover,
+#profile-css-scope [type="button"]:hover,
+#profile-css-scope [type="submit"]:hover,
+#profile-css-scope a[role="button"]:hover {
+  background-position: 0% 0, center, 0 0 !important;
+  border-color: rgba(95, 212, 255, 0.6) !important;
+  box-shadow: 0 10px 22px rgba(95, 212, 255, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+#profile-css-scope button:active,
+#profile-css-scope [type="button"]:active,
+#profile-css-scope [type="submit"]:active,
+#profile-css-scope a[role="button"]:active {
+  transform: translateY(1px) !important;
+}
+
+
+/* ============================
+   MUSIC TOGGLE
+   ============================ */
+
+[data-section="profile-music-toggle"] {
+  position: fixed !important;
+  top: 16px !important;
+  left: 16px !important;
+  z-index: 50 !important;
+
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+
+  background: radial-gradient(circle at 32% 28%, var(--planet-light), var(--planet-base) 70%) !important;
+  border: 1px solid rgba(201, 184, 122, 0.4) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45) !important;
+
+  transition: transform 0.3s ease !important;
+}
+
+[data-section="profile-music-toggle"]:hover {
+  transform: scale(1.08) rotate(15deg) !important;
+}
+
+
+/* ============================
+   LINKS / HEADINGS / TEXT
+   ============================ */
+
+a {
+  color: var(--plasma) !important;
+  text-decoration: none !important;
+  transition: color 0.25s ease !important;
+}
+
+a:hover {
+  color: var(--plasma-hot) !important;
+}
+
+.font-semibold {
+  font-family: 'Space Mono', monospace !important;
+  color: var(--starlight) !important;
+}
+
+h2,
+h3 {
+  font-family: 'Cinzel', serif !important;
+  color: var(--plasma) !important;
+  text-shadow: 0 0 10px rgba(95, 212, 255, 0.25) !important;
+}
+
+#profile-css-scope .text-muted-foreground,
+#profile-css-scope .text-foreground\/90,
+#profile-css-scope .text-xs,
+#profile-css-scope .text-sm {
+  color: var(--dim) !important;
+}
+
+
+
+/* ============================
+   TRANSPARENT BLOCKS
+   Targets every individual block within the profile scope
+   ============================ */
+
+
+#profile-css-scope [class*="card"],
+#profile-css-scope [class*="panel"],{
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* ============================
+   SCROLLBAR
+   ============================ */
+
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--nebula-violet), var(--plasma), var(--plasma-hot)) !important;
+  border-radius: 999px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void-deep) !important;
+}
