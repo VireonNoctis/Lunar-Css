@@ -1,0 +1,682 @@
+/*
+╔══════════════════════════════════════════════════════╗
+║              STAINED GLASS CATHEDRAL                 ║
+║      Ruby, Sapphire, Emerald, Amethyst & Gold        ║
+╠══════════════════════════════════════════════════════╣
+║ Creator : Vireon                                     ║
+║ Style   : Jewel-Toned Leaded Glass                   ║
+╠══════════════════════════════════════════════════════╣
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond&display=swap');
+
+
+/* ============================
+   PALETTE
+   ============================ */
+
+:root {
+  --lead: #0a0a0a;
+  --lead-deep: #050505;
+
+  --ruby: #d43f5a;
+  --ruby-deep: #8a1f35;
+  --sapphire: #3f7fd4;
+  --sapphire-deep: #1f4a8a;
+  --emerald: #3fd48a;
+  --emerald-deep: #1f8a52;
+  --amethyst: #a05fd4;
+  --amethyst-deep: #6a2f8a;
+  --gold: #e8c158;
+  --gold-deep: #b8902e;
+
+  --text: #f3ecda;
+  --dim: #b0a894;
+}
+
+
+/* ============================
+   BANNER
+   ============================ */
+
+[data-section="banner"] {
+  display: none !important;
+}
+
+
+/* ============================
+   BASE BACKGROUND
+   ============================ */
+
+#profile-css-scope {
+  background:
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0.5) 2px, transparent 2px, transparent 90px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0px, rgba(0, 0, 0, 0.5) 2px, transparent 2px, transparent 90px),
+    radial-gradient(ellipse at 10% 10%, rgba(212, 63, 90, 0.18) 0%, transparent 38%),
+    radial-gradient(ellipse at 90% 10%, rgba(63, 127, 212, 0.18) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 5%, rgba(232, 193, 88, 0.16) 0%, transparent 35%),
+    radial-gradient(ellipse at 15% 85%, rgba(63, 212, 138, 0.14) 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 85%, rgba(160, 95, 212, 0.14) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(10, 10, 10, 0.6), rgba(5, 5, 5, 0.92)),
+    url('https://vault.lunarx.to/cdn/admin/updatedialogue/migrated/34d2ec85-0172-4e8e-b8a4-3003217cee8f.png') !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+
+  font-family: 'Cormorant Garamond', serif !important;
+  color: var(--text) !important;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif !important;
+  color: var(--text) !important;
+}
+
+
+/* ============================
+   AVATAR
+   ============================ */
+
+[data-section="avatar"] {
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: visible !important;
+
+  border-radius: 50% !important;
+  border: 2px solid var(--gold) !important;
+
+  background: radial-gradient(circle at 35% 25%, rgba(243, 236, 218, 0.3) 0%, rgba(10, 10, 10, 0.75) 60%, rgba(5, 5, 5, 0.92) 100%) !important;
+
+  box-shadow:
+    0 0 0 4px var(--lead),
+    0 0 18px rgba(232, 193, 88, 0.4) !important;
+
+  transition: transform 0.35s ease, box-shadow 0.4s ease !important;
+}
+
+[data-section="avatar"] img {
+  border-radius: 50% !important;
+  display: block !important;
+  position: relative;
+  z-index: 2;
+}
+
+[data-section="avatar"]::before {
+  content: '';
+  position: absolute;
+  inset: -16px;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    conic-gradient(
+      from 0deg,
+      rgba(212, 63, 90, 0.5) 0deg 90deg,
+      rgba(63, 127, 212, 0.5) 90deg 180deg,
+      rgba(63, 212, 138, 0.5) 180deg 270deg,
+      rgba(160, 95, 212, 0.5) 270deg 360deg
+    );
+
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 5px));
+
+  opacity: 0.8;
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
+}
+
+[data-section="avatar"]:hover {
+  transform: scale(1.05) !important;
+  box-shadow:
+    0 0 0 4px var(--lead),
+    0 0 28px rgba(232, 193, 88, 0.6) !important;
+}
+
+[data-section="avatar"]:hover::before {
+  transform: rotate(120deg) !important;
+  opacity: 1 !important;
+}
+
+[data-section="avatar-decoration"] {
+  filter: saturate(1.15) drop-shadow(0 0 4px rgba(232, 193, 88, 0.4)) !important;
+}
+
+
+/* ============================
+   USERNAME
+   ============================ */
+
+[data-section="username"] h1 {
+  font-family: 'Cinzel', serif !important;
+  font-size: 2rem !important;
+  letter-spacing: 0.03em !important;
+
+  background: linear-gradient(90deg, var(--ruby), var(--gold) 25%, var(--emerald) 50%, var(--sapphire) 75%, var(--amethyst)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  text-shadow: 0 0 20px rgba(232, 193, 88, 0.3) !important;
+  transition: transform 0.25s ease !important;
+}
+
+[data-section="username"] h1:hover {
+  transform: translateY(-3px) !important;
+}
+
+
+/* ============================
+   ONLINE STATUS / DOT / LAST SEEN
+   ============================ */
+
+[data-section="online-status"] {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-size: 12px !important;
+  letter-spacing: 1px !important;
+  color: var(--gold) !important;
+  -webkit-text-fill-color: var(--gold) !important;
+}
+
+[data-section="online-dot"] {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: var(--emerald) !important;
+  box-shadow: 0 0 8px rgba(63, 212, 138, 0.8) !important;
+  transition: box-shadow 0.6s ease !important;
+}
+
+[data-section="last-seen"] {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-size: 0.75rem !important;
+  color: var(--dim) !important;
+}
+
+
+/* ============================
+   ACTIVITY CARD
+   ============================ */
+
+[data-section="activity-card"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(63, 127, 212, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px 18px !important;
+  position: relative;
+
+  box-shadow:
+    inset 0 0 20px rgba(63, 127, 212, 0.08),
+    0 10px 24px rgba(0, 0, 0, 0.5) !important;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="activity-card"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow:
+    inset 0 0 26px rgba(63, 127, 212, 0.14),
+    0 14px 28px rgba(63, 127, 212, 0.2) !important;
+}
+
+[data-section="activity-dot"] {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: var(--sapphire) !important;
+  box-shadow: 0 0 6px rgba(63, 127, 212, 0.6) !important;
+}
+/* ============================
+   BADGES — 43 HAND-WRITTEN
+   ============================ */
+
+[data-section="badges"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* shared shell */
+[data-section="badges"] > * {
+  font-family: 'Cinzel', serif !important;
+  font-size: 9px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  color: #d5cfcf !important;
+  -webkit-text-fill-color: #969696 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  border: 1px solid var(--a) !important;
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--a) 65%, #fff),
+      color-mix(in srgb, var(--b) 65%, #fff)) !important;
+  box-shadow:
+    inset 0 0 6px rgba(255, 255, 255, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.25) !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+
+[data-section="badges"]::before {
+  content: "STAINED GLASS";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  margin: 2px;
+
+  font-family: 'Cinzel', serif !important;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--text);
+
+  background: linear-gradient(135deg, rgba(212, 63, 90, 0.3), rgba(160, 95, 212, 0.3));
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(232, 193, 88, 0.25);
+}
+
+
+[data-section="badges"]::after {
+  content: "VIREON";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px;
+  margin: 2px;
+
+  font-family: 'Cinzel', serif !important;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+
+  background: linear-gradient(135deg, rgba(63, 212, 138, 0.25), rgba(63, 127, 212, 0.25));
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  box-shadow: 0 0 12px rgba(232, 193, 88, 0.2);
+}
+
+[data-section="badges"] > *:nth-child(1)  { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(2)  { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(3)  { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(4)  { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(5)  { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(6)  { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(7)  { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(8)  { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(9)  { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(10) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(11) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(12) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(13) { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(14) { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(15) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(16) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(17) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(18) { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(19) { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(20) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(21) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(22) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(23) { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(24) { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(25) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(26) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(27) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(28) { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(29) { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(30) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(31) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(32) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(33) { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(34) { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(35) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(36) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(37) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(38) { --a: var(--emerald);  --b: var(--amethyst); }
+[data-section="badges"] > *:nth-child(39) { --a: var(--amethyst); --b: var(--gold); }
+[data-section="badges"] > *:nth-child(40) { --a: var(--gold);     --b: var(--ruby); }
+[data-section="badges"] > *:nth-child(41) { --a: var(--ruby);     --b: var(--sapphire); }
+[data-section="badges"] > *:nth-child(42) { --a: var(--sapphire); --b: var(--emerald); }
+[data-section="badges"] > *:nth-child(43) { --a: var(--emerald);  --b: var(--amethyst); }
+/* ============================
+   LEVEL / XP CARD
+   ============================ */
+
+[data-section="level"] {
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(212, 63, 90, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 15%, rgba(63, 127, 212, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, rgba(232, 193, 88, 0.12) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 0.95)) !important;
+
+  border: 1px solid var(--gold-deep) !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55) !important;
+  transition: box-shadow 0.35s ease !important;
+}
+
+[data-section="level"]:hover {
+  box-shadow: 0 16px 34px rgba(232, 193, 88, 0.22) !important;
+}
+
+[role="progressbar"] {
+  background: rgba(5, 5, 5, 0.7) !important;
+  border: 1px solid rgba(232, 193, 88, 0.3) !important;
+  border-radius: 999px !important;
+  height: 8px !important;
+  overflow: hidden !important;
+}
+
+[data-section="level"] [role="progressbar"] > div,
+[role="progressbar"] > div {
+  height: 8px !important;
+  background: linear-gradient(90deg, var(--ruby), var(--gold), var(--emerald), var(--sapphire), var(--amethyst)) !important;
+  box-shadow: 0 0 10px rgba(232, 193, 88, 0.5) !important;
+  border-radius: 999px !important;
+  transition: filter 0.4s ease !important;
+}
+
+[data-section="level"]:hover [role="progressbar"] > div {
+  filter: brightness(1.2) !important;
+}
+
+
+/* ============================
+   DATA / CONTENT CARDS
+   ============================ */
+
+[data-section="bio"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(212, 63, 90, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(212, 63, 90, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="bio"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(212, 63, 90, 0.14), 0 18px 36px rgba(212, 63, 90, 0.2) !important;
+}
+
+[data-section="anilist-stats"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(63, 127, 212, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(63, 127, 212, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="anilist-stats"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(63, 127, 212, 0.14), 0 18px 36px rgba(63, 127, 212, 0.2) !important;
+}
+
+[data-section="gacha-showcase"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid var(--gold-deep) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(232, 193, 88, 0.1), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="gacha-showcase"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(232, 193, 88, 0.16), 0 18px 36px rgba(232, 193, 88, 0.22) !important;
+}
+
+[data-section="watch-history"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(63, 212, 138, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(63, 212, 138, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="watch-history"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(63, 212, 138, 0.14), 0 18px 36px rgba(63, 212, 138, 0.2) !important;
+}
+
+[data-section="comment-history"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(160, 95, 212, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(160, 95, 212, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="comment-history"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(160, 95, 212, 0.14), 0 18px 36px rgba(160, 95, 212, 0.2) !important;
+}
+
+[data-section="playlists"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(212, 63, 90, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(212, 63, 90, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="playlists"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(212, 63, 90, 0.14), 0 18px 36px rgba(212, 63, 90, 0.2) !important;
+}
+
+[data-section="active-projects"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(63, 127, 212, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(63, 127, 212, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="active-projects"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(63, 127, 212, 0.14), 0 18px 36px rgba(63, 127, 212, 0.2) !important;
+}
+
+[data-section="manga-uploads"] {
+  background: linear-gradient(155deg, rgba(20, 20, 20, 0.85), rgba(5, 5, 5, 0.92)) !important;
+  border: 1px solid rgba(63, 212, 138, 0.4) !important;
+  border-radius: 10px !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 20px rgba(63, 212, 138, 0.08), 0 14px 30px rgba(0, 0, 0, 0.45) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  margin-top: 14px !important;
+}
+
+[data-section="manga-uploads"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: inset 0 0 26px rgba(63, 212, 138, 0.14), 0 18px 36px rgba(63, 212, 138, 0.2) !important;
+}
+
+[data-section="gacha-showcase"] img,
+[data-section="bio"] img,
+[data-section="watch-history"] img,
+[data-section="comment-history"] img,
+[data-section="playlists"] img,
+[data-section="manga-uploads"] img {
+  border-radius: 6px !important;
+  border: 1px solid var(--gold-deep) !important;
+}
+
+
+/* ============================
+   ICONS
+   ============================ */
+
+.lucide.w-4.h-4 {
+  color: var(--gold) !important;
+}
+
+.w-8.h-8.rounded-full.bg-yellow-500\/20,
+.w-8.h-8.rounded-full.bg-purple-500\/20,
+.w-8.h-8.rounded-full.bg-blue-500\/20,
+.w-8.h-8.rounded-full.bg-green-500\/20 {
+  background: linear-gradient(135deg, rgba(212, 63, 90, 0.16), rgba(63, 127, 212, 0.16)) !important;
+  border: 1px solid var(--gold-deep) !important;
+}
+
+
+/* ============================
+   BUTTONS
+   ============================ */
+
+#profile-css-scope button,
+#profile-css-scope [type="button"],
+#profile-css-scope [type="submit"],
+#profile-css-scope a[role="button"] {
+  position: relative !important;
+  overflow: hidden !important;
+
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  padding: 9px 20px !important;
+
+  border-radius: 8px !important;
+  color: var(--text) !important;
+  border: 1px solid var(--gold) !important;
+
+  background:
+    linear-gradient(100deg, transparent 35%, rgba(212, 63, 90, 0.35) 42%, rgba(232, 193, 88, 0.35) 50%, rgba(63, 212, 138, 0.35) 58%, rgba(63, 127, 212, 0.35) 66%, transparent 73%) 120% 0 / 300% 100% no-repeat,
+    linear-gradient(180deg, rgba(20, 20, 20, 0.92), rgba(5, 5, 5, 0.96)) !important;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45) !important;
+
+  transition:
+    background-position 0.7s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease !important;
+}
+
+#profile-css-scope button:hover,
+#profile-css-scope [type="button"]:hover,
+#profile-css-scope [type="submit"]:hover,
+#profile-css-scope a[role="button"]:hover {
+  background-position: -20% 0, 0 0 !important;
+  border-color: var(--gold-deep) !important;
+  box-shadow: 0 10px 22px rgba(232, 193, 88, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+#profile-css-scope button:active,
+#profile-css-scope [type="button"]:active,
+#profile-css-scope [type="submit"]:active,
+#profile-css-scope a[role="button"]:active {
+  transform: translateY(1px) !important;
+}
+
+
+/* ============================
+   MUSIC TOGGLE
+   ============================ */
+
+[data-section="profile-music-toggle"] {
+  position: fixed !important;
+  top: 16px !important;
+  left: 16px !important;
+  z-index: 50 !important;
+
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+
+  background: conic-gradient(var(--ruby), var(--gold), var(--emerald), var(--sapphire), var(--amethyst), var(--ruby)) !important;
+  border: 2px solid var(--lead) !important;
+  box-shadow: 0 0 0 1px var(--gold), 0 6px 16px rgba(0, 0, 0, 0.4) !important;
+
+  transition: transform 0.3s ease !important;
+}
+
+[data-section="profile-music-toggle"]:hover {
+  transform: scale(1.08) rotate(20deg) !important;
+}
+
+
+/* ============================
+   LINKS / HEADINGS / TEXT
+   ============================ */
+
+a {
+  color: var(--gold) !important;
+  text-decoration: none !important;
+  transition: color 0.25s ease !important;
+}
+
+a:hover {
+  color: var(--emerald) !important;
+}
+
+.font-semibold {
+  font-family: 'Cormorant Garamond', serif !important;
+  color: var(--text) !important;
+}
+
+h2,
+h3 {
+  font-family: 'Cinzel', serif !important;
+  color: var(--gold) !important;
+  text-shadow: 0 0 10px rgba(232, 193, 88, 0.2) !important;
+}
+
+#profile-css-scope .text-muted-foreground,
+#profile-css-scope .text-foreground\/90,
+#profile-css-scope .text-xs,
+#profile-css-scope .text-sm {
+  color: var(--dim) !important;
+}
+
+
+/* ============================
+   SCROLLBAR
+   ============================ */
+
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--ruby), var(--gold), var(--emerald), var(--sapphire), var(--amethyst)) !important;
+  border-radius: 999px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--lead-deep) !important;
+}
