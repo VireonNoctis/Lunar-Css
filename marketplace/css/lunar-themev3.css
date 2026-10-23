@@ -1,0 +1,718 @@
+body{
+    background-image:url("https://files.catbox.moe/hlqdww.png") !important;
+    background-size:cover !important;
+    background-position:center !important;
+    background-repeat:no-repeat !important;
+    background-attachment:fixed !important;
+}
+
+/*delete for banner*/
+[data-section="banner"] {display: none !important}
+
+
+#profile-css-scope {
+  border: 1px solid #6366f1 !important;
+  outline: 1px solid rgba(99,102,241,0.25) !important;
+  outline-offset: 4px !important;
+}
+
+#profile-css-scope [data-section="avatar"] img {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  border: 1px solid #6366f1 !important;
+  box-shadow: none !important;
+  animation: none !important;
+  filter: none !important;
+}
+
+#profile-css-scope [data-section="username"] {
+  border-left: 2px solid #6366f1 !important;
+  padding-left: 14px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+}
+
+
+[data-section="online-status"] * {
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+}
+
+[data-section="badges"] a,
+[data-section="badges"] span,
+[data-section="badges"] div {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 9px !important;
+  letter-spacing: 0.1em !important;
+  background: rgba(99,102,241,0.07) !important;
+  border: 0.5px solid rgba(99,102,241,0.3) !important;
+  color: #a5b4fc !important;
+  box-shadow: none !important;
+}
+
+[data-section="badges"]::before {
+  content: "⏾⋆.LUNA⋆⭒˚." !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  padding: 3px 10px !important;
+  border-radius: 0 !important;
+  background: rgba(139,92,246,0.12) !important;
+  border: 0.5px solid rgba(139,92,246,0.5) !important;
+  color: #a78bfa !important;
+  margin-right: 6px !important;
+  vertical-align: middle !important;
+}
+[data-section="badges"]::after {
+  content: "X_X & Vireon" !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  padding: 3px 10px !important;
+  border-radius: 0 !important;
+  background: rgba(139,92,246,0.25) !important;
+  border: 0.5px solid rgba(139,92,246,0.5) !important;
+  color: #a78bfa !important;
+  margin-left: 6px !important;
+  vertical-align: middle !important;
+}
+
+#profile-css-scope [data-section="level"] {
+  background-color: #111118 !important;
+  background-image:
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434) !important;
+  background-size:
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px !important;
+  background-position:
+    top left,    top left,
+    top right,   top right,
+    bottom left, bottom left,
+    bottom right,bottom right !important;
+  background-repeat: no-repeat !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  padding: 16px 24px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+#profile-css-scope [data-section="level"]::before,
+#profile-css-scope [data-section="level"]::after {
+  display: none !important;
+}
+
+[data-section="level"] [role="progressbar"] {
+  background: #1a1a2a !important;
+  border-radius: 0 !important;
+  height: 2px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+[data-section="level"] [role="progressbar"]::before,
+[data-section="level"] [role="progressbar"]::after { display: none !important; }
+[data-section="level"] [role="progressbar"] > div,
+[data-section="level"] [role="progressbar"] > div[style] {
+  background: #6366f1 !important;
+  background-image: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+[data-section="level"] [role="progressbar"] > div::before,
+[data-section="level"] [role="progressbar"] > div::after { display: none !important; }
+
+#profile-css-scope [data-section="level"] > div span,
+#profile-css-scope [data-section="level"] > div p,
+#profile-css-scope [data-section="level"] > div h3,
+#profile-css-scope [data-section="level"] > span,
+#profile-css-scope [data-section="level"] > p {
+  color: #555a88 !important;
+  -webkit-text-fill-color: #555a88 !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 9px !important;
+  letter-spacing: 0.18em !important;
+  text-shadow: none !important;
+  text-transform: uppercase !important;
+  background: none !important;
+}
+
+#profile-css-scope [data-section="watch-history"],
+#profile-css-scope [data-section="comment-history"],
+#profile-css-scope [data-section="playlists"],
+#profile-css-scope [data-section="manga-uploads"],
+#profile-css-scope [data-section="active-projects"] {
+  background-color: #111118 !important;
+  background-image:
+    linear-gradient(#301934,#301934),linear-gradient(#301934,#301934),
+    linear-gradient(#301934,#301934),linear-gradient(#301934,#301934),
+    linear-gradient(#301934,#301934),linear-gradient(#301934,#301934),
+    linear-gradient(#301934,#301934),linear-gradient(#301934,#301934) !important;
+  background-size:
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px !important;
+  background-position:
+    top left,    top left,
+    top right,   top right,
+    bottom left, bottom left,
+    bottom right,bottom right !important;
+  background-repeat: no-repeat !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 6px 0 !important;
+}
+#profile-css-scope [data-section="watch-history"]::before,
+#profile-css-scope [data-section="watch-history"]::after,
+#profile-css-scope [data-section="comment-history"]::before,
+#profile-css-scope [data-section="comment-history"]::after,
+#profile-css-scope [data-section="playlists"]::before,
+#profile-css-scope [data-section="playlists"]::after,
+#profile-css-scope [data-section="active-projects"]::before,
+#profile-css-scope [data-section="active-projects"]::after { display: none !important; }
+
+#profile-css-scope [data-section="gacha-showcase"] {
+  background-color: #111118 !important;
+  background-image:
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1) !important;
+  background-size:
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px !important;
+  background-position:
+    top left,    top left,
+    top right,   top right,
+    bottom left, bottom left,
+    bottom right,bottom right !important;
+  background-repeat: no-repeat !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+  margin: 6px 0 !important;
+  overflow: visible !important;
+}
+#profile-css-scope [data-section="gacha-showcase"]::before,
+#profile-css-scope [data-section="gacha-showcase"]::after { display: none !important; }
+#profile-css-scope [data-section="gacha-showcase"] [class*="overflow-hidden"] {
+  overflow: hidden !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+}
+#profile-css-scope [data-section="gacha-showcase"] img {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  filter: none !important;
+  position: relative !important;
+  z-index: 1 !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+}
+
+#profile-css-scope [data-section] h2,
+#profile-css-scope [data-section] h3 {
+  font-family: 'Courier Prime', monospace !important;
+  color: #555a88 !important;
+  -webkit-text-fill-color: #555a88 !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2em !important;
+  text-shadow: none !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  padding-left: 0 !important;
+  background: none !important;
+}
+
+.rounded-xl.border, div.rounded-xl.border,
+.rounded-lg.border, div.rounded-lg.border {
+  background-color: #111118 !important;
+  background-image:
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1) !important;
+  background-size:
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px,
+    1px 6px, 6px 1px !important;
+  background-position:
+    top left,    top left,
+    top right,   top right,
+    bottom left, bottom left,
+    bottom right,bottom right !important;
+  background-repeat: no-repeat !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.rounded-xl.border::before, .rounded-xl.border::after,
+div.rounded-xl.border::before, div.rounded-xl.border::after,
+.rounded-lg.border::before, .rounded-lg.border::after,
+div.rounded-lg.border::before, div.rounded-lg.border::after { display: none !important; }
+
+button, a[role="button"], [class*="btn"], [class*="button"] {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+  background: #0d0f1e !important;
+  border: 1px solid rgba(99,102,241,0.25) !important;
+  color: #a5b4fc !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 10px !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 14px 18px !important;
+  transition: border-color 0.2s, background 0.2s !important;
+}
+button:hover, a[role="button"]:hover {
+  background: #10122a !important;
+  border-color: rgba(99,102,241,0.5) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+button::after, a[role="button"]::after {
+  color: rgba(99,102,241,0.5) !important;
+  font-size: 12px !important;
+  margin-left: auto !important;
+}
+[class*="profile"] button, [class*="sidebar"] button,
+nav button, aside button {
+  clip-path: none !important;
+  border-radius: 0 !important;
+  background: #0d0f1e !important;
+  border: 1px solid rgba(99,102,241,0.25) !important;
+  color: #a5b4fc !important;
+}
+
+#profile-css-scope [data-section="level"],
+#profile-css-scope [data-section="watch-history"],
+#profile-css-scope [data-section="comment-history"],
+#profile-css-scope [data-section="playlists"],
+#profile-css-scope [data-section="manga-uploads"],
+#profile-css-scope [data-section="active-projects"],
+#profile-css-scope [data-section="gacha-showcase"],
+.rounded-xl.border, div.rounded-xl.border,
+.rounded-lg.border, div.rounded-lg.border,
+aside div[class*="rounded"], aside a[class*="rounded"], aside [class*="card"] {
+  background-color: #0e0e16 !important;
+  background-image:
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),linear-gradient(#343434,#343434) !important;
+  background-size:
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px !important;
+  background-position:
+    top left,    top left,
+    top right,   top right,
+    bottom left, bottom left,
+    bottom right,bottom right !important;
+  background-repeat: no-repeat !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+main h1, main h2 {
+  font-family: 'Playfair Display', serif !important;
+  color: #f0f0f0 !important;
+  -webkit-text-fill-color: #f0f0f0 !important;
+  text-shadow: none !important;
+  padding-left: 0 !important;
+  background: none !important;
+}
+
+main p[class*="font-"], main h3[class*="font-"] {
+  color: #a0a8c8 !important;
+  -webkit-text-fill-color: #a0a8c8 !important;
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 12px !important;
+  text-shadow: none !important;
+}
+main [class*="text-muted"], main [class*="text-gray"], main time {
+  color: #3a3d5c !important;
+  -webkit-text-fill-color: #3a3d5c !important;
+}
+main img { border-radius: 0 !important; }
+
+main [class*="group"],
+main [class*="transition"][class*="rounded"],
+main div[class*="overflow-hidden"],
+main a[class*="overflow-hidden"],
+main a[class*="cursor-pointer"] {
+  border-radius: 0 !important;
+  clip-path: none !important;
+  outline: 1px solid #1e2040 !important;
+  outline-offset: -1px !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+main [class*="group"]:hover,
+main div[class*="overflow-hidden"]:hover,
+main a[class*="overflow-hidden"]:hover,
+main a[class*="cursor-pointer"]:hover {
+  outline: 1px solid #6366f1 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+aside div[class*="rounded"], aside a[class*="rounded"], aside [class*="card"] {
+  background-color: #111118 !important;
+  background-image:
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1),
+    linear-gradient(#6366f1,#6366f1),linear-gradient(#6366f1,#6366f1) !important;
+  background-size:
+    1px 14px, 14px 1px, 1px 14px, 14px 1px,
+    1px 14px, 14px 1px, 1px 14px, 14px 1px !important;
+  background-position:
+    top left, top left, top right, top right,
+    bottom left, bottom left, bottom right, bottom right !important;
+  background-repeat: no-repeat !important;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  box-shadow: none !important;
+}
+
+a { color: #6366f1 !important; }
+a:hover { color: #a5b4fc !important; }
+
+::-webkit-scrollbar { width: 3px !important; }
+::-webkit-scrollbar-track { background: #080810 !important; }
+::-webkit-scrollbar-thumb { background: #6366f1 !important; border-radius: 0 !important; }
+/* ============================================================
+   ONLINE DOT
+   ============================================================ */
+
+#profile-css-scope [data-section="online-dot"] {
+  width: 6px !important;
+  height: 6px !important;
+  min-width: 6px !important;
+  min-height: 6px !important;
+
+  border-radius: 0 !important;
+  background: #6366f1 !important;
+  box-shadow: 0 0 6px rgba(99, 102, 241, 0.55) !important;
+  animation: none !important;
+}
+
+
+/* ============================================================
+   LAST SEEN
+   ============================================================ */
+
+#profile-css-scope [data-section="last-seen"] {
+  color: #45496b !important;
+  -webkit-text-fill-color: #45496b !important;
+
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 9px !important;
+  font-style: normal !important;
+  letter-spacing: 0.12em !important;
+  opacity: 0.85 !important;
+
+  text-shadow: none !important;
+}
+
+
+/* ============================================================
+   ACTIVITY / WATCHING CARD
+   ============================================================ */
+
+#profile-css-scope [data-section="activity-card"] {
+  background: #0e0e16 !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+  padding: 12px 16px !important;
+
+  font-family: 'Courier Prime', monospace !important;
+}
+
+#profile-css-scope [data-section="activity-card"] * {
+  font-family: 'Courier Prime', monospace !important;
+}
+
+#profile-css-scope [data-section="activity-card"] h1,
+#profile-css-scope [data-section="activity-card"] h2,
+#profile-css-scope [data-section="activity-card"] h3 {
+  color: #a5b4fc !important;
+  -webkit-text-fill-color: #a5b4fc !important;
+
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-shadow: none !important;
+}
+
+#profile-css-scope [data-section="activity-card"] p,
+#profile-css-scope [data-section="activity-card"] span {
+  color: #777da8 !important;
+  -webkit-text-fill-color: #777da8 !important;
+
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+}
+
+#profile-css-scope [data-section="activity-card"] a {
+  color: #8b7cf6 !important;
+  -webkit-text-fill-color: #8b7cf6 !important;
+}
+
+
+/* ============================================================
+   ACTIVITY DOT
+   ============================================================ */
+
+#profile-css-scope [data-section="activity-dot"] {
+  width: 5px !important;
+  height: 5px !important;
+  min-width: 5px !important;
+  min-height: 5px !important;
+
+  border-radius: 0 !important;
+  background: #8b7cf6 !important;
+  box-shadow: 0 0 6px rgba(139, 124, 246, 0.55) !important;
+  animation: none !important;
+}
+
+
+/* ============================================================
+   BIO
+   ============================================================ */
+
+#profile-css-scope [data-section="bio"] {
+  background-color: #0e0e16 !important;
+
+  background-image:
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434) !important;
+
+  background-size:
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px !important;
+
+  background-position:
+    top left, top left,
+    top right, top right,
+    bottom left, bottom left,
+    bottom right, bottom right !important;
+
+  background-repeat: no-repeat !important;
+
+  border-radius: 0 !important;
+  border: none !important;
+
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+
+/* ============================================================
+   ANILIST STATS
+   ============================================================ */
+
+#profile-css-scope [data-section="anilist-stats"] {
+  background-color: #0e0e16 !important;
+
+  background-image:
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434),
+    linear-gradient(#343434,#343434) !important;
+
+  background-size:
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px,
+    1px 8px, 8px 1px !important;
+
+  background-position:
+    top left, top left,
+    top right, top right,
+    bottom left, bottom left,
+    bottom right, bottom right !important;
+
+  background-repeat: no-repeat !important;
+
+  border-radius: 0 !important;
+  border: none !important;
+
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+
+/* ============================================================
+   MUSIC TOGGLE
+   ============================================================ */
+
+#profile-css-scope [data-section="profile-music-toggle"] {
+  background: #0d0f1e !important;
+  color: #a5b4fc !important;
+
+  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+  transform: none !important;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease !important;
+}
+
+#profile-css-scope [data-section="profile-music-toggle"]:hover {
+  background: #10122a !important;
+  color: #c4b5fd !important;
+
+  border-color: rgba(99, 102, 241, 0.65) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+
+/* ============================================================
+   MUSICAL NOTE DETAIL
+   ============================================================ */
+
+#profile-css-scope [data-section="bio"]::after,
+#profile-css-scope [data-section="anilist-stats"]::after {
+  content: "♪" !important;
+
+  position: absolute !important;
+  right: 12px !important;
+  top: 8px !important;
+
+  color: rgba(99, 102, 241, 0.35) !important;
+  font-family: serif !important;
+  font-size: 12px !important;
+
+  pointer-events: none !important;
+}
+
+
+/* ============================================================
+   INTERNAL BIO / STATS TEXT
+   ============================================================ */
+
+#profile-css-scope [data-section="bio"] p,
+#profile-css-scope [data-section="bio"] span,
+#profile-css-scope [data-section="anilist-stats"] p,
+#profile-css-scope [data-section="anilist-stats"] span {
+  color: #777da8 !important;
+  -webkit-text-fill-color: #777da8 !important;
+
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+
+  text-shadow: none !important;
+}
+
+
+#profile-css-scope [data-section="bio"] h2,
+#profile-css-scope [data-section="bio"] h3,
+#profile-css-scope [data-section="anilist-stats"] h2,
+#profile-css-scope [data-section="anilist-stats"] h3 {
+  color: #6366f1 !important;
+  -webkit-text-fill-color: #6366f1 !important;
+
+  font-family: 'Courier Prime', monospace !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+}
+
+
+#profile-css-scope [data-section="profile-music-toggle"] button,
+#profile-css-scope [data-section="profile-music-toggle"] a {
+  min-width: 0 !important;
+  width: auto !important;
+  display: flex !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+
+  color: inherit !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+
+#profile-css-scope [data-section="activity-card"]::after {
+  content: "♫" !important;
+
+  color: rgba(99, 102, 241, 0.45) !important;
+  font-family: serif !important;
+  font-size: 12px !important;
+
+  pointer-events: none !important;
+}
